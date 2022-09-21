@@ -1,0 +1,146 @@
+:root {
+  --bg-color: #19242e;
+  --bg-color-text: #f26b38;
+  --bg-color-input: #757c82;
+  --bg-color-type: #e9edf1;
+}
+
+.carousel {
+  padding: 0 20px;
+
+  /* position: relative; */
+}
+
+.carousel_item img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.booking__tickets {
+  color: black;
+  /* position: absolute;
+  top: 0;
+  right: 0; */
+}
+
+.booking__tickets h3 {
+  text-transform: uppercase;
+
+  font-weight: 500;
+}
+
+.noti {
+  width: 70px !important;
+  height: 3px !important;
+}
+
+.tickets__menu {
+  display: flex;
+  /* justify-content: space-around; */
+  padding: 10px 0px;
+}
+
+.tickets__menu p {
+  width: 33%;
+  padding: 10px 20px;
+  border: 1px solid var(--bg-color);
+  cursor: pointer;
+  background-color: var(--bg-color-type);
+  transition: all 0.3s ease-in;
+  text-align: center;
+}
+
+.tickets__menu p:hover {
+  color: var(--bg-color-text);
+  transition: all 0.3s ease-in;
+}
+
+.tickets_form {
+  padding: 0px 00px;
+}
+
+.tickets_form select {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.btn_buy_tickets {
+  padding: 10px 20px;
+  background-color: var(--bg-color-text);
+  color: white;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  border: 1px solid var(--bg-color-text);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.tickets__menu p {
+  width: 33%;
+  padding: 10px 20px;
+  border: 1px solid var(--bg-color);
+  cursor: pointer;
+  background-color: var(--bg-color-type);
+  text-align: center;
+  transition: all 0.3s ease-in;
+}
+@media (min-width: 62em) {
+  .carousel {
+    position: relative;
+    padding: 0;
+  }
+  .booking__tickets {
+    width: 340px;
+    background-color: var(--bg-color);
+    color: white;
+    position: absolute;
+    top: 5%;
+    right: 7%;
+  }
+  .booking__tickets h3 {
+    background-color: var(--bg-color-text);
+    display: inline-block;
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+  }
+
+  .tickets__menu {
+    padding: 10px 20px;
+  }
+  .tickets__menu p {
+    width: initial;
+    padding: 20px 13px;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    text-align: center;
+  }
+  
+  .tickets_form {
+    padding: 0 20px;
+  }
+
+  .tickets_form select {
+    background-color: var(--bg-color-input);
+    color: white;
+    padding-bottom: 10px;
+    padding: 6px 10px;
+  }
+  .choice {
+    color: var(--bg-color-text);
+    border-bottom: 2px solid var(--bg-color-text) !important;
+  }
+
+  .btn_buy_tickets {
+    width: 90px;
+    float: right;
+  }
+
+  .noti {
+    display: none;
+  }
+}

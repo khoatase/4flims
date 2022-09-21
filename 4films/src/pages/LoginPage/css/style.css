@@ -1,0 +1,121 @@
+.login__films {
+  background-image: url("https://thegioidienanh.vn/stores/news_dataimages/hath/122018/25/14/2840_2._Khong_gian_ben_trong_rYp_IMAX_YYu_tien_tYi_Ha_NYi.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+
+.login__container {
+  width: 80%;
+  border: 1px solid black;
+  background-color: white;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  color: black;
+  background-image: url("https://alternativemovieposters.com/wp-content/uploads/2018/01/walker_babydriver.jpg");
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+.login__container h1 {
+  text-align: center;
+  /* margin: 10px 0; */
+  margin-bottom: 10px;
+}
+
+.container__form {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__form label {
+  margin-right: 10px;
+}
+
+.container__form input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid black;
+  font-weight: 700;
+}
+
+.container__form .form_username,
+.container__form .form_password {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+.form_username {
+  margin: 20px 0;
+}
+
+.container__form .btn_login {
+  width: 30%;
+  margin-top: 30px;
+  background-color: rgb(111, 17, 227, 0.8);
+  color: white;
+  border: 1px solid rgb(111, 17, 227, 0.8);
+  border-radius: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.container__form .btn_login:hover {
+  background-color: rgb(111, 17, 227, 1);
+  transition: all 0.5s ease-out;
+}
+
+.login__films .login__container {
+  animation-name: example;
+  animation-duration: 2s;
+  transition: all 0.3 ease-in;
+  /* transform: translateX(-200%); */
+}
+
+@keyframes example {
+  from {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 62em) {
+  .login__container {
+    width: 40%;
+  }
+
+  .container__form .form_username,
+  .container__form .form_password {
+    width: 60%;
+  }
+
+  .container__form .btn_login {
+    width: 20%;
+  }
+}
