@@ -1,3 +1,3 @@
-const getinfoUser = () => JSON.parse(localStorage.getItem("infoUser"));
+const getToken = () => localStorage.getItem("token");
 
-export default getinfoUser;
+export default getToken;

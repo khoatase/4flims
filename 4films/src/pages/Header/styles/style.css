@@ -144,6 +144,12 @@
     z-index: 1000;
   }
 
+  .home__menu img {
+    height: 60px;
+    width: 300px;
+    cursor: pointer;
+  }
+
   .icon_menu {
     display: none;
   }
@@ -190,12 +196,13 @@
     padding-top: 0;
     justify-content: space-around;
     color: white;
-    padding: 10px 0px;
+    padding: 5px 0px;
   }
 
   .list__menu li {
     border-right: 2px solid white;
-    padding-right: 20px;
+    padding-right: 10px;
+    margin: 5px 0;
   }
 
   .list__menu li:last-child {

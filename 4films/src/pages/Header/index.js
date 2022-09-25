@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./styles/style.css";
+import { Link } from "react-router-dom";
 const Header = () => {
   const [clickMenu, setClickMenu] = useState(false);
   const changeStateMenu = () => {
@@ -18,11 +19,13 @@ const Header = () => {
   return (
     <div className="homepage">
       <div className="home__menu">
-        <img
-          className="menu__img"
-          src="https://www.galaxycine.vn/website/images/galaxy-logo-mobile.png"
-          alt=""
-        />
+        <a src="/">
+          <img
+            className="menu__img"
+            src="https://www.galaxycine.vn/website/images/galaxy-logo-mobile.png"
+            alt=""
+          />
+        </a>
         <div className="menu__search">
           <input placeholder="Tìm tên phim, diễn viên..." name="searchValue" />
           <i class="fa-solid fa-magnifying-glass"></i>
@@ -33,7 +36,8 @@ const Header = () => {
             <p>Đăng nhập</p>
           </div>
           <p className="languages">
-            <p className="languages_VN"> VN </p> | <p className="languages_EN"> EN </p>
+            <p className="languages_VN"> VN </p> |{" "}
+            <p className="languages_EN"> EN </p>
           </p>
           <div
             className={!clickMenu ? "icon_menu" : "icon_menu clickMenu"}

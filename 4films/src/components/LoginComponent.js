@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from "react";
 import UserAPI from "../services/api/UserAPI";
-import getinfoUser from "../utils/token";
+// import getinfoUser from "../utils/token";
 import { useNavigate } from "react-router-dom";
+import actionCreator from "../utils/actionCreator";
+import { LOGIN } from "../contexts/types";
+import { useAuthContext } from "../contexts/AuthContext/AuthContext";
+import getToken from "../utils/token";
 const initialState = {
   username: "",
   password: "",
 };
 const LoginComponent = () => {
   const [infoLogin, setInfoLogin] = useState(initialState);
+  const { state, dispatch } = useAuthContext();
   const navigate = useNavigate();
   useEffect(() => {
-    const inforUser = getinfoUser();
-    if (inforUser && inforUser.token) {
-      navigate(-1);
+    const token = getToken();
+    if (token) {
+      navigate("/");
     }
   }, []);
 
@@ -28,8 +33,9 @@ const LoginComponent = () => {
     e.preventDefault();
     const { username, password } = infoLogin;
     const infoUser = await checkLogin(username, password);
-    localStorage.setItem("infoUser", JSON.stringify(infoUser));
-    navigate("/")
+    const actionLogin = actionCreator(LOGIN, { ...infoUser });
+    dispatch(actionLogin);
+    navigate("/");
     setInfoLogin(initialState);
   };
 
